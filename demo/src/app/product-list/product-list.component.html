@@ -1,7 +1,9 @@
 <h2>Products List Below</h2>
 <ul>
   <div *ngFor="let product of products">
-    <h3> {{product.name}} </h3>
+    <a>
+      <h3> {{product.name}} </h3>
+    </a>
 
     <p *ngIf="product.rating">
       Rating: {{product.rating}}
@@ -15,7 +17,9 @@
       Share
     </button>
 
-    <app-product-alerts [product]="product">
+    <app-product-alerts
+      [product]="product"
+      (notify)="onNotify()">
     </app-product-alerts>
 
   </div>

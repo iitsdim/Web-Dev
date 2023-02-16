@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {Product} from "../product.model";
 
 @Component({
@@ -8,4 +8,5 @@ import {Product} from "../product.model";
 })
 export class ProductAlertsComponent {
   @Input() product!: Product;
+  @Output() notify = new EventEmitter();
 }
