@@ -11,7 +11,7 @@ export class ProductListComponent {
 
   constructor() {
     this.products = [
-      {'name': 'BigMac', 'description': 'BIG and TASTY', 'rating': 5}
+      {'name': 'BigMac', 'description': 'BIG and TASTY', 'rating': 5, 'id': 1}
     ];
   }
 

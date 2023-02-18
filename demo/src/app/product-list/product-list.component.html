@@ -1,9 +1,11 @@
 <h2>Products List Below</h2>
 <ul>
   <div *ngFor="let product of products">
-    <a>
-      <h3> {{product.name}} </h3>
-    </a>
+    <h3>
+      <a [routerLink]="['/products', product.id]">
+        {{product.name}}
+      </a>
+    </h3>
 
     <p *ngIf="product.rating">
       Rating: {{product.rating}}
