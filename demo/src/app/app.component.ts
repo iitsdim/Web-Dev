@@ -7,7 +7,10 @@ import {Component, ViewEncapsulation} from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class AppComponent {
+  title: string;
+
   constructor() {
     console.log('constructor of AppComponent');
+    this.title = 'demo'
   }
 }

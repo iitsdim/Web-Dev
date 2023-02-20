@@ -1,5 +1,7 @@
-import {Component} from '@angular/core';
-import {Product} from "../product.model";
+import {Component, OnInit} from '@angular/core';
+import {Product} from '../product.model';
+import * as data from "../../assets/json/products.json"
+import {ProductListService} from "../product-list.service";
 
 @Component({
   selector: 'app-product-list',
@@ -9,10 +11,10 @@ import {Product} from "../product.model";
 export class ProductListComponent {
   products: Product[];
 
-  constructor() {
-    this.products = [
-      {'name': 'BigMac', 'description': 'BIG and TASTY', 'rating': 5, 'id': 1}
-    ];
+  constructor(
+    private productService: ProductListService
+  ) {
+    this.products = this.productService.getProductList()
   }
 
   share() {
