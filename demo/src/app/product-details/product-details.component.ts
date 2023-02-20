@@ -1,8 +1,7 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 
 import {Product} from '../product.model';
-import {ProductListComponent} from "../product-list/product-list.component";
 import {CartService} from '../cart.service';
 import {ProductListService} from "../product-list.service";
 
