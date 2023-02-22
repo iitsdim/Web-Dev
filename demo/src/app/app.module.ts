@@ -12,6 +12,8 @@ import { CartComponent } from './cart/cart.component';
 import {HttpClientModule} from "@angular/common/http";
 import { ShippingComponent } from './shipping/shipping.component';
 import {ReactiveFormsModule} from "@angular/forms";
+import {ShareButtons, ShareButtonsModule} from "ngx-sharebuttons/buttons";
+import {ShareIconsModule} from "ngx-sharebuttons/icons";
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import {ReactiveFormsModule} from "@angular/forms";
       {path: 'cart', component: CartComponent},
       {path: 'shipping', component: ShippingComponent},
     ]),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ShareButtonsModule,
+    ShareIconsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

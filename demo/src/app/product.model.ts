@@ -3,5 +3,6 @@ export interface Product {
   description: string,
   rating: number
   id: number,
-  kaspiLink: string
+  kaspiLink: string,
+  image: string,
 }

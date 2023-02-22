@@ -16,9 +16,15 @@
       Description: {{product.description}}
     </p>
 
-    <button type="button" (click)="share()">
-      Share
-    </button>
+    <share-buttons
+      theme="modern-dark"
+      [include]="['telegram', 'whatsapp']"
+      [showIcon]="true"
+      [showText]="false"
+      url="{{product.kaspiLink}}"
+      description="Look at what I found"
+      class="pt-5">
+    </share-buttons>
 
     <app-product-alerts
       [product]="product"

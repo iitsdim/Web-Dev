@@ -4,8 +4,6 @@
   font-family: 'Roboto', Arial, sans-serif;
   color: #616161;
   box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -135,4 +133,13 @@ app-top-bar h1 {
   margin-bottom: 8px;
   border-radius: 2px;
   background-color: #EEEEEE;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.flex-container > span {
+  margin: 10px 10px;
+  padding: 10px 20px;
 }
