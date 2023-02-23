@@ -39,6 +39,10 @@ export class ProductDetailsComponent implements OnInit {
     window.alert('Your product has been added to the cart!');
   }
 
+  deleteProduct(productId: number) {
+    this.productListService.deleteProduct(productId);
+  }
+
   likedProduct(product: Product) {
     if (this.likedBefore) {
       product.likes--;

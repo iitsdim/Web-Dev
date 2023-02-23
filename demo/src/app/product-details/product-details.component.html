@@ -7,13 +7,19 @@
     <a href="{{product.kaspiLink}}">
       {{product.name}}
     </a>
+    <a
+      [routerLink]="['/category', product.category]"
+      (click)="deleteProduct(product.id)"
+      >
+      <i class="bi bi-x-circle"></i>
+    </a>
   </h3>
-  <div class="flex-container">
+  <div class="container">
     <span>
       <img src="{{product.image}}" [width]=300>
     </span>
     <span>
-      <div class="flex-container">
+      <div class="container">
         <button (click)="likedProduct(product)">
           <i class="{{this.likeButtonClass}}">{{product.likes}}</i>
         </button>

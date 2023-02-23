@@ -139,6 +139,13 @@ export class ProductListService {
     this.products.push(product);
   }
 
+  deleteProduct(productId: number) {
+    const index = this.products.findIndex((product: Product) => product.id == productId, 0);
+    if(index > -1) {
+      this.products.splice(index, 1);
+    }
+  }
+
   getProductList() {
     return this.products;
   }

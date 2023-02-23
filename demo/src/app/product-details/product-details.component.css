@@ -1,7 +1,3 @@
-.flex-container {
-  display: flex;
-}
-
 .flex-container > span {
   margin: 10px 10px;
   padding: 10px 20px;
@@ -10,6 +6,11 @@
 button {
   background-color: white;
   font-size: medium;
+}
+
+.bi-x-circle {
+  right: 30px;
+  position: absolute;
 }
 
 .bi-hand-thumbs-up-fill{
