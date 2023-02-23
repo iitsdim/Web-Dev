@@ -1,3 +1,12 @@
+.flex-container {
+  display: flex;
+}
+
+.flex-container > span {
+  margin: 10px 10px;
+  padding: 10px 20px;
+}
+
 button {
   background-color: white;
   font-size: medium;
@@ -5,7 +14,7 @@ button {
 
 .bi-hand-thumbs-up-fill{
   animation:like 0.5s 1;
-  fill:red;
+  color:red;
   stroke:none;
 }
 .bi-hand-thumbs-up{
