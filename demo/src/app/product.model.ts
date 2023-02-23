@@ -5,4 +5,6 @@ export interface Product {
   id: number,
   kaspiLink: string,
   image: string,
+  likes: number,
+  category: number,
 }

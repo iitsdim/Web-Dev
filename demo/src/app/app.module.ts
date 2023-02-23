@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import {NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -14,6 +14,7 @@ import { ShippingComponent } from './shipping/shipping.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import {ShareButtons, ShareButtonsModule} from "ngx-sharebuttons/buttons";
 import {ShareIconsModule} from "ngx-sharebuttons/icons";
+import { CategoryListComponent } from './category-list/category-list.component';
 
 @NgModule({
   declarations: [
@@ -23,14 +24,17 @@ import {ShareIconsModule} from "ngx-sharebuttons/icons";
     ProductAlertsComponent,
     ProductDetailsComponent,
     CartComponent,
-    ShippingComponent
+    ShippingComponent,
+    CategoryListComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
     RouterModule.forRoot([
-      {path: '', component: ProductListComponent},
+      {path: '', component: CategoryListComponent},
+      {path: 'category/:categoryId', component: ProductListComponent},
+      {path: 'products', component: ProductListComponent},
       {path: 'products/:productId', component: ProductDetailsComponent},
       {path: 'cart', component: CartComponent},
       {path: 'shipping', component: ShippingComponent},

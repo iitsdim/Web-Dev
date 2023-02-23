@@ -1,0 +1,21 @@
+button {
+  background-color: white;
+  font-size: medium;
+}
+
+.bi-hand-thumbs-up-fill{
+  animation:like 0.5s 1;
+  fill:red;
+  stroke:none;
+}
+.bi-hand-thumbs-up{
+  fill:transparent;
+  stroke:black;
+  stroke-width:30;
+  transition:all 0.5s;
+}
+@-webkit-keyframes like {
+  0%   { transform: scale(1); }
+  90%   { transform: scale(1.2); }
+  100% { transform: scale(1.1); }
+}
