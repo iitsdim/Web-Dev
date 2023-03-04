@@ -44,6 +44,9 @@ import { CategoryListComponent } from './category-list/category-list.component';
     ShareIconsModule,
   ],
   providers: [],
+  exports: [
+    TopBarComponent
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
