@@ -1,0 +1,35 @@
+<h2>Products List Below</h2>
+<ul>
+  <div *ngFor="let product of products">
+    <h3>
+      <a
+        [routerLink]="['/products', product.id]">
+        {{product.name}}
+      </a>
+    </h3>
+
+    <p *ngIf="product.rating">
+      Rating: {{product.rating}}
+    </p>
+
+    <p *ngIf="product.description != ''">
+      Liked by: {{product.likes}}
+    </p>
+
+    <share-buttons
+      theme="modern-dark"
+      [include]="['telegram', 'whatsapp']"
+      [showIcon]="true"
+      [showText]="false"
+      url="{{product.kaspiLink}}"
+      description="Look at what I found"
+      class="pt-5">
+    </share-buttons>
+
+    <app-product-alerts
+      [product]="product"
+      (notify)="onNotify()">
+    </app-product-alerts>
+
+  </div>
+</ul>

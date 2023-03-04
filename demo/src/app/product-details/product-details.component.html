@@ -1,0 +1,46 @@
+<h2>
+  Product Details
+</h2>
+
+<div *ngIf="product">
+  <h3>
+    <a href="{{product.kaspiLink}}">
+      {{product.name}}
+    </a>
+    <a
+      [routerLink]="['/category', product.category]"
+      (click)="deleteProduct(product.id)"
+      >
+      <i class="bi bi-x-circle"></i>
+    </a>
+  </h3>
+  <div class="container">
+    <span>
+      <img src="{{product.image}}" [width]=300>
+    </span>
+    <span>
+      <div class="container">
+        <button (click)="likedProduct(product)">
+          <i class="{{this.likeButtonClass}}">{{product.likes}}</i>
+        </button>
+        <h4>
+          <i class="bi bi-star-fill"></i>
+          {{product.rating}}
+        </h4>
+      </div>
+      <p>Description: {{product.description}}</p>
+    </span>
+  </div>
+  <share-buttons
+    theme="modern-dark"
+    [include]="['telegram', 'whatsapp']"
+    [showIcon]="true"
+    [showText]="false"
+    url="{{product.kaspiLink}}"
+    description="Look at what I found"
+    class="pt-5">
+  </share-buttons>
+  <button type="button" (click)="addToCart(product)">
+    Buy
+  </button>
+</div>
