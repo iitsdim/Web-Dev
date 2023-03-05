@@ -2,7 +2,7 @@
 
 <ul>
   <span *ngFor="let album of albums">
-    <li *ngIf="album.display != false">
+    <li *ngIf="album.display != false" class="container">
       <a
       [routerLink]="['/albums', album.id]">
         {{album.id}} {{album.title}}
