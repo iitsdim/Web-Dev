@@ -1,3 +1,4 @@
-<p>album-detail works!</p>
 <h2>Title: {{album.title}}</h2>
-
+<a [routerLink]="['/albums', album.id, 'photos']">
+  Look at Photos
+</a>

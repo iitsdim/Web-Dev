@@ -1,1 +1,12 @@
-<p>album-photos works!</p>
+<h1>Album-photos: </h1>
+
+<ul>
+  <span *ngFor="let albumPhoto of albumPhotos">
+    <li>
+      <h2>
+        {{albumPhoto.title}}
+      </h2>
+      <img src="{{albumPhoto.thumbnailUrl}}" alt="image could not load">
+    </li>
+  </span>
+</ul>

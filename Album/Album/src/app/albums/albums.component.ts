@@ -18,4 +18,8 @@ export class AlbumsComponent implements OnInit {
       this.albums = albums
     });
   }
+
+  deleteAlbum(album: Album) {
+    album["display"] = false;
+  }
 }
