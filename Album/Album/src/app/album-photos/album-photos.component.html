@@ -1,4 +1,11 @@
-<h1>Album-photos: </h1>
+<div class="container">
+  <h1>Album-photos: </h1>
+  <span>
+      <a [routerLink]="['/albums', id]">
+        Go back
+      </a>
+  </span>
+</div>
 
 <ul>
   <span *ngFor="let albumPhoto of albumPhotos">

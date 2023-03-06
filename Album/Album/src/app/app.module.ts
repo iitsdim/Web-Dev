@@ -10,6 +10,8 @@ import { AlbumsComponent } from './albums/albums.component';
 import { AlbumPhotosComponent } from './album-photos/album-photos.component';
 import { AlbumDetailComponent } from './album-detail/album-detail.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
+import {FormsModule} from "@angular/forms";
+import {Location} from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { TopBarComponent } from './top-bar/top-bar.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

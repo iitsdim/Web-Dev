@@ -1,4 +1,19 @@
-<h2>Title: {{album.title}}</h2>
-<a [routerLink]="['/albums', album.id, 'photos']">
-  Look at Photos
-</a>
+<div class="container">
+  <span>
+    <a>
+      <h2>Title: {{album.title}}</h2>
+    </a>
+    <a [routerLink]="['/albums', album.id, 'photos']">
+      Look at Photos
+    </a>
+  </span>
+  <span>
+    <a [routerLink]="['/albums']">
+      Go back
+    </a>
+    <fieldset>
+      <input type="text" [(ngModel)]="newTitle">
+      <button (click)="changeTitle()"> save </button>
+    </fieldset>
+  </span>
+</div>

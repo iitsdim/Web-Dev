@@ -10,12 +10,14 @@ import {AlbumService} from "../album.service";
 })
 export class AlbumDetailComponent implements OnInit {
   album: Album;
+  newTitle: string;
 
   constructor(
     private route: ActivatedRoute,
     private albumService: AlbumService,
   ) {
     this.album = {} as Album;
+    this.newTitle = "";
   }
 
   ngOnInit(): void {
@@ -28,6 +30,14 @@ export class AlbumDetailComponent implements OnInit {
         });
       }
     });
+  }
+
+  changeTitle() {
+    if (!this.newTitle) {
+      return;
+    }
+    this.album.title = this.newTitle;
+    this.newTitle = "";
   }
 
 }
