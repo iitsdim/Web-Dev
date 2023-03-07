@@ -12,6 +12,7 @@ import { AlbumDetailComponent } from './album-detail/album-detail.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import {FormsModule} from "@angular/forms";
 import {Location} from "@angular/common";
+import { AlbumsCrudPageComponent } from './albums-crud-page/albums-crud-page.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import {Location} from "@angular/common";
     AlbumsComponent,
     AlbumPhotosComponent,
     AlbumDetailComponent,
-    TopBarComponent
+    TopBarComponent,
+    AlbumsCrudPageComponent
   ],
   imports: [
     BrowserModule,
