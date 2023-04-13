@@ -16,6 +16,7 @@ class CompanySerializer(serializers.ModelSerializer):
 
 
 class ReadCompanySerializer(serializers.Serializer):
+    id = serializers.IntegerField()
     name = serializers.CharField(max_length=200)
     description = serializers.CharField(max_length=555)
     city = serializers.CharField(max_length=200)

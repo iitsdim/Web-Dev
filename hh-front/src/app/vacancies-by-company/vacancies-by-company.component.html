@@ -1,1 +1,8 @@
-<p>vacancies-by-company works!</p>
+<h2>vacancies-by-company: </h2>
+<ul>
+  <li *ngFor="let vacancy of vacancies">
+    <h3> {{vacancy.name}} </h3>
+    <h4> {{vacancy.salary}} </h4>
+    <p> {{vacancy.description}}</p>
+  </li>
+</ul>
